@@ -1,0 +1,7 @@
+{
+  "name": "gestionUtilisateur",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
