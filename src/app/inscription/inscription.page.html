@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inscription</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <div id="bg">
+    <ion-fab vertical="bottom" edge horizontal="center" slot="fixed">
+      <ion-fab-button color="white" routerLink="/home">
+        <ion-icon name="close-outline" color="medium"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  <ion-list lines="none" class="ion-margin">
+    <ion-list-header>Inscription</ion-list-header>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Votre Nom" type="text" clearInput="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Votre Prénoms" type="text" clearInput="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Votre email" type="email" clearInput="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Mot de Passe" type="password" clearInput="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Confirme mot de passe" type="password" clearInput="true"></ion-input>
+    </ion-item>
+    <div align="right">
+      <ion-button shape="round" strong="true" class="ion-margin-end" color="success" [routerLink]="['/login']">
+        S'incrire
+        <ion-icon name="log-in" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-list>
 </ion-content>
+
