@@ -15,10 +15,10 @@ export class LoginPage implements OnInit {
   }
   logUser(data){
     try {
-    return this.verifie.login(data.value.email, data.value.password).then(res =>{
-      console.log(res)
-      this.route.navigate(['/acceuil']),
-      })
+     return this.verifie.login(data.value.email, data.value.password).then(res =>{
+       console.log(res)
+       this.route.navigate(['/acceuil'])
+      });
     }
     catch (error) {
       console.log(error);
