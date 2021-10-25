@@ -6,29 +6,28 @@
       </ion-fab-button>
     </ion-fab>
   </div>
-  <ion-list lines="none" class="ion-margin">
-    <ion-list-header>Inscription</ion-list-header>
-    <ion-item class="ion-margin">
-      <ion-input placeholder="Votre Nom" type="text" clearInput="true"></ion-input>
-    </ion-item>
-    <ion-item class="ion-margin">
-      <ion-input placeholder="Votre Prénoms" type="text" clearInput="true"></ion-input>
-    </ion-item>
-    <ion-item class="ion-margin">
-      <ion-input placeholder="Votre email" type="email" clearInput="true"></ion-input>
-    </ion-item>
-    <ion-item class="ion-margin">
-      <ion-input placeholder="Mot de Passe" type="password" clearInput="true"></ion-input>
-    </ion-item>
-    <ion-item class="ion-margin">
-      <ion-input placeholder="Confirme mot de passe" type="password" clearInput="true"></ion-input>
-    </ion-item>
-    <div align="right">
-      <ion-button shape="round" strong="true" class="ion-margin-end" color="success" [routerLink]="['/login']">
-        S'incrire
-        <ion-icon name="log-in" slot="end"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-list>
+  <form>
+    <ion-list lines="none" class="ion-margin">
+      <ion-list-header>Inscription</ion-list-header>
+      <ion-item class="ion-margin">
+        <ion-input placeholder="Votre NomComplet" type="text" name="nom" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin">
+        <ion-input placeholder="Votre Numéro" type="number" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin">
+        <ion-input placeholder="Votre email" type="email" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin">
+        <ion-input placeholder="Mot de passe" type="password" clearInput="true"></ion-input>
+      </ion-item>
+      <div align="right">
+        <ion-button shape="round" strong="true" class="ion-margin-end" color="success" [routerLink]="['/login']">
+          S'incrire
+          <ion-icon name="log-in" slot="end"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-list>
+  </form>
 </ion-content>
 

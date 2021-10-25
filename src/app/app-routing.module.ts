@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
     path: 'oubliepass',
     loadChildren: () => import('./oubliepass/oubliepass.module').then( m => m.OubliepassPageModule)
   },
@@ -38,6 +34,10 @@ const routes: Routes = [
   {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'acceuil',
+    loadChildren: () => import('./acceuil/acceuil.module').then( m => m.AcceuilPageModule)
   },
 ];
 
