@@ -20,4 +20,12 @@ export class AuthService {
       );
     });
   }
+  register(email, password){
+    return new Promise<any>((resolve, reject)=>{
+      this.auth.createUserWithEmailAndPassword(email, password).then(
+        res=>resolve(res),
+        err=>reject(err)
+      );
+    });
+  }
 }
