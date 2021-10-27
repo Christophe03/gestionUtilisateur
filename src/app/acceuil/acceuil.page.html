@@ -1,9 +1,48 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>acceuil</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <body>
+    <ion-app>
+      <ion-menu side="start" content-id="main-content">
+        <ion-header>
+          <ion-toolbar translucent>
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="person-circle"></ion-icon>
+              <ion-label [routerLink]="['/profile']" fill="clear">Profil</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="power-sharp"></ion-icon>
+              <ion-label [routerLink]="['/home']" fill="clear">Se Déconnecter</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-icon name="search-outline" slot="end" [routerLink]="['/search']"></ion-icon>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-item *ngFor="let item of items |async">
+            <ion-avatar slot="start">
+              <img src='../../assets/icon/Users.png'>
+            </ion-avatar>
+            <ion-label>
+              <h2>{{item.nomComplet}}</h2>
+              <h3>{{item.numerotel}}</h3>
+              <p>{{item.Adressemail}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-content>
+      </div>
+    </ion-app>
+  </body>
 </ion-content>

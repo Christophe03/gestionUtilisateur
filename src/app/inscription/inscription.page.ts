@@ -17,14 +17,14 @@ export class InscriptionPage implements OnInit {
   register(data){
     try {
       this.service.register(data.value.email, data.value.password).then(result=>{
-        console.log(result)
-        this.fire.collection("users").doc(result.user.uid).set({
+        console.log(result);
+        this.fire.collection('users').doc(result.user.uid).set({
           'nomComplet':data.value.nom,
           'numerotel':data.value.numero,
           'Adressemail':data.value.email,
           'Motpasse':data.value.password
-        })
-        this.route.navigate(['/login'])
+        });
+        this.route.navigate(['/login']);
       });
     } catch (error) {
       console.log(error);

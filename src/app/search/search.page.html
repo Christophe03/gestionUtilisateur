@@ -1,9 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>search</ion-title>
+  <ion-toolbar color="primary">
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Recherche</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <ion-searchbar showCancelButton="" (ionInput)="filterList($event)"></ion-searchbar>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of usersList">
+        <ion-avatar slot="start">
+          <img src='../../assets/icon/Users.png'>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.nomComplet}}</h2>
+          <h3>{{item.numerotel}}</h3>
+          <p>{{item.Adressemail}}</p>
+        </ion-label>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
