@@ -1,15 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-back-button slot="start"></ion-back-button>
-    <ion-title>Profil</ion-title>
+  <ion-toolbar color="medium">
+    <ion-icon name="arrow-back" slot="start" [routerLink]="['acceuil']"></ion-icon>
+    <ion-title>Profile</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-
-  <ion-list lines="none">
-    <ion-item>
-          <img src='../../assets/icon/Users.png'>
-    </ion-item>
-  </ion-list>
-
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="outer">
+      <img src='../../assets/icon/Users.png'>
+        <div class="inner">
+          <ion-icon name="camera" class="camera-icon"></ion-icon>
+        </div>
+    </div>
+  </div>
+  <ion-item>
+    <ion-label>
+      <h2>{{user.nomComplet}}</h2>
+      <h4>{{user.numerotel}}</h4>
+      <p>{{user.Adressemail}}</p>
+    </ion-label>
+  </ion-item>
 </ion-content>

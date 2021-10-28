@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { async } from '@firebase/util';
-import {first} from 'rxjs/operators';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
