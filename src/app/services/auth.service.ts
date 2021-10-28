@@ -17,7 +17,7 @@ export class AuthService {
       message: message,
       color: color,
       position: 'top',
-      duration: 2000
+      duration: 1000
 
     })
     msg.present();
