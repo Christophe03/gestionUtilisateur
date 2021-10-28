@@ -8,13 +8,13 @@
   </div>
   <form>
     <ion-list lines="none" class="ion-margin">
-      <ion-list-header>Mot de Passe Oulier</ion-list-header>
+      <ion-list-header>Code</ion-list-header>
       <ion-item class="ion-margin">
-        <ion-input placeholder="Votre email" type="email" ngModel clearInput="true" name="email"></ion-input>
+        <ion-input placeholder="saisie le code reçu par email" type="number" ngModel clearInput="true" name="email"></ion-input>
       </ion-item>
       <div align="right">
-        <ion-button type="submit" shape="round" strong="true" class="ion-margin-end" [routerLink]="['/code-email']" color="light">
-          Envoyer
+        <ion-button type="submit" shape="round" strong="true" [routerLink]="['/reinitialisation']" class="ion-margin-end" color="light">
+          Valider
           <ion-icon name="log-in" slot="end"></ion-icon>
         </ion-button>
       </div>

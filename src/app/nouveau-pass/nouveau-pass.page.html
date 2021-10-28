@@ -10,14 +10,17 @@
     <ion-list lines="none" class="ion-margin">
       <ion-list-header>Mot de Passe</ion-list-header>
       <ion-item class="ion-margin">
+        <ion-input placeholder="Ancien Mot de Passe" type="password" ngModel clearInput="true" name="email"></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin">
         <ion-input placeholder="Nouveau Mot de Passe" type="password" ngModel clearInput="true" name="email"></ion-input>
       </ion-item>
       <ion-item class="ion-margin">
         <ion-input placeholder="Confirmer Mot de Password" type="password" ngModel clearInput="true" name="password"></ion-input>
       </ion-item>
       <div align="right">
-        <ion-button type="submit" shape="round" strong="true" [routerLink]="['/login']" class="ion-margin-end" color="light">
-          Connection
+        <ion-button type="submit" shape="round" strong="true" [routerLink]="['/acceuil']" class="ion-margin-end" color="light">
+          Valider
           <ion-icon name="log-in" slot="end"></ion-icon>
         </ion-button>
       </div>

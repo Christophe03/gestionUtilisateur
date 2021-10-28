@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'acceuil',
     loadChildren: () => import('./acceuil/acceuil.module').then( m => m.AcceuilPageModule)
   },
+  {
+    path: 'nouveau-pass',
+    loadChildren: () => import('./nouveau-pass/nouveau-pass.module').then( m => m.NouveauPassPageModule)
+  },
+  {
+    path: 'code-email',
+    loadChildren: () => import('./code-email/code-email.module').then( m => m.CodeEmailPageModule)
+  },
 ];
 
 @NgModule({

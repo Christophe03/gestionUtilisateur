@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
       });
     }
     catch (error) {
-      console.log(error);
+      console.log(error.message('email ou mot de passe incorrect'));
     }
   }
 }
