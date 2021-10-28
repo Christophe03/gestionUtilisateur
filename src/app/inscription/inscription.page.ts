@@ -25,6 +25,7 @@ export class InscriptionPage implements OnInit {
           'Motpasse':data.value.password
         });
         this.route.navigate(['/login']);
+        this.service.myMessage('Inscription effectuer avec Success', 'success')
       });
     } catch (error) {
       console.log(error);

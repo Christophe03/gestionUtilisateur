@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -18,6 +19,7 @@ export class LoginPage implements OnInit {
      return this.verifie.login(data.value.email, data.value.password).then(res =>{
        console.log(res)
        this.route.navigate(['/acceuil'])
+       this.verifie.myMessage('Connected', 'success')
       });
     }
     catch (error) {
