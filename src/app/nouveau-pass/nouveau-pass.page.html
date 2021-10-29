@@ -6,20 +6,20 @@
       </ion-fab-button>
     </ion-fab>
   </div>
-  <form>
+  <form #pass="ngForm"(ngSubmit)="updatePass(pass)">
     <ion-list lines="none" class="ion-margin">
       <ion-list-header>Mot de Passe</ion-list-header>
       <ion-item class="ion-margin">
-        <ion-input placeholder="Ancien Mot de Passe" type="password" ngModel clearInput="true" name="email"></ion-input>
+        <ion-input placeholder="Ancien Mot de Passe" name="old_pass"  type="password" ngModel clearInput="true"></ion-input>
       </ion-item>
       <ion-item class="ion-margin">
-        <ion-input placeholder="Nouveau Mot de Passe" type="password" ngModel clearInput="true" name="email"></ion-input>
+        <ion-input placeholder="Nouveau Mot de Passe" name="new_pass" type="password" ngModel clearInput="true"></ion-input>
       </ion-item>
       <ion-item class="ion-margin">
-        <ion-input placeholder="Confirmer Mot de Password" type="password" ngModel clearInput="true" name="password"></ion-input>
+        <ion-input placeholder="Confirmer Mot de Password" name="conf_new" type="password" ngModel clearInput="true"></ion-input>
       </ion-item>
       <div align="right">
-        <ion-button type="submit" shape="round" strong="true" [routerLink]="['/acceuil']" class="ion-margin-end" color="light">
+        <ion-button type="submit" shape="round" strong="true" class="ion-margin-end" color="light">
           Valider
           <ion-icon name="log-in" slot="end"></ion-icon>
         </ion-button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
@@ -10,7 +11,7 @@ export class SearchPage implements OnInit {
   usersList: any[];
   usersSave: any[];
 
-  constructor(public fire: AngularFirestore) { }
+  constructor(public fire: AngularFirestore, private router: Router, private service: AuthService) { }
 
   async ngOnInit() {
     this.fire.collection('users').valueChanges().subscribe(getList =>{
@@ -35,6 +36,15 @@ export class SearchPage implements OnInit {
         return false;
       }
     });
+  }
+  signOut() {
+    this.service.signoutUser()
+      .then(res => {
+        this.router.navigateByUrl('home');
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
 }

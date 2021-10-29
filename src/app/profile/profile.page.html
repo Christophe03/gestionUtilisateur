@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar color="medium">
-    <ion-back-button slot="start"></ion-back-button>
-    <ion-icon name="arrow-back" slot="start"></ion-icon>
+    <ion-back-button slots="start"></ion-back-button>
     <ion-title>Profile</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -22,4 +21,7 @@
     </ion-label>
   </ion-item>
   <ion-text color="medium"><p class="ion-margin-horizontal" [routerLink]="['/nouveau-pass']">Modifier le mot de passe</p></ion-text>
+  <section>
+    <ion-button expand="block" [routerLink]="['/acceuil']">Retour</ion-button>
+  </section>
 </ion-content>
