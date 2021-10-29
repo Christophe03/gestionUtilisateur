@@ -14,12 +14,12 @@ export class AuthService {
   }
   async myMessage(message, color){
     const msg = await this.toastMessages.create({
-      message: 'message',
-      color: 'color',
+      message: message,
+      color: color,
       position: 'top',
       duration: 1000
 
-    });
+    })
     msg.present();
   }
   async login(email, password){
@@ -49,6 +49,6 @@ export class AuthService {
           reject();
         });
       }
-    });
+    })
   }
 }
